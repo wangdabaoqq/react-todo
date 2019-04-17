@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import HeaderTodo from './page/HeaderTodo'
+import ItemTodo from './page/ItemTodo'
 import './App.css';
 
 class App extends Component {
+  constructor () {
+    super()
+    this.state = {
+      todos: []
+    }
+  }
+  addTodo (item) {
+    this.state.todos.push(item)
+    this.setState = {
+      todos: this.state.todos
+    }
+  }
   render() {
+    console.log(this.state.todos)
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <HeaderTodo addTodo={this.addTodo.bind(this)} />
+      <ItemTodo todos={this.state.todos} />
       </div>
     );
   }
