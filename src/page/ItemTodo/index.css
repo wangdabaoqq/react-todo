@@ -1,0 +1,38 @@
+.itemtodo {
+  text-align: left;
+  position: relative;
+}
+.checkSty:first-child {
+  margin-top: 10px!important;
+  border-top: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  /* width: 100%; */
+  /* padding: 5px 2px!important; */
+  /* border-radius: 4px; */
+}
+.common {
+  /* border-radius: 4px; */
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px 2px!important;
+  border-top: none;
+}
+.common:hover {
+  /* background-color: #ccc; */
+  /* color: #096dd9; */
+  background-color: #ddd;
+  /* border-color: #096dd9; */
+}
+.ant-checkbox-wrapper + .ant-checkbox-wrapper {
+  margin-left: 0!important;
+}
+.addSty {
+  text-decoration: line-through;
+}
+.icons:hover {
+  color: #08c!important;
+}
+.iconPos {
+  position: absolute;
+  right: 10px;
+}

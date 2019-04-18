@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  width: 50%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .App-logo {
@@ -31,3 +35,7 @@
     transform: rotate(360deg);
   }
 }
+.ant-card-body {
+  padding: 15px!important;
+}
+
