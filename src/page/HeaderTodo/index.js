@@ -1,12 +1,22 @@
 import React from 'react'
 import { Input } from 'antd'
 export default class HeaderTodo extends React.Component {
-  // constructor () {
-  //   super()
-  //   this.state = {
-  //     value: 'ss'
-  //   }
-  // }
+  constructor () {
+    super()
+    this.state = {
+      value: ''
+    }
+  }
+  componentWillMount () {
+    console.log(123)
+  }
+  componentDidMount () {
+    console.log(111)
+  }
+  onChange = (e) => {
+    let value = e.target.value
+    this.setState({ value })
+  }
   handleKeyup (e) {
     let value = e.target.value
     if (!value) return false
@@ -14,7 +24,8 @@ export default class HeaderTodo extends React.Component {
       value,
       isDone: false
     }
-    e.target.value = ''
+    // e.target.value = ''
+    this.setState({ value: '' })
     // console.log(e)
     this.props.addTodo(item)
     // console.log(e.target.value)
@@ -39,7 +50,7 @@ export default class HeaderTodo extends React.Component {
     // console.log(value)
     return (
       <div className="header-todo">
-        <Input ref="saasInput"  placeholder="请输入任务规划" type="text" onPressEnter={this.handleKeyup.bind(this)} />
+        <Input ref="saasInput" value={this.state.value}  placeholder="请输入任务规划" type="text" onPressEnter={this.handleKeyup.bind(this)} onChange={this.onChange} />
       </div>
     )
   }

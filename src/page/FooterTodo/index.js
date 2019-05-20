@@ -11,7 +11,7 @@ export default class FooterTodo extends React.Component {
     this.props.checkChange(isDone)
   }
   cleanAll () {
-    this.props.cleanAll()
+    // this.props.()
   }
   render () {
     // let isDone = this.props.isALlCheck
